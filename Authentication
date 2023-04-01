@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 
+
+
 # API endpoint URL
 API_URL = "https://api.thetradedesk.com/v3/authentication"
 
@@ -21,3 +23,18 @@ if response.status_code == 200:
     # st.write(data)
 else:
     st.write("Error: Could not retrieve Token from TTD.")
+    
+#
+API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth="data
+
+Headers=
+{"Content-Type": "application/json"}
+
+segID=input("Please insert SegmentID:")
+
+# Parameters
+{ Params=  "ProviderId": "startapp",
+  "ProviderElementId": ,
+  "IncludeActiveIDsCountExpandedFlag":" true",
+  "PageStartIndex":"0",
+  "PageSize": "100"}
