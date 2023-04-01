@@ -1,0 +1,20 @@
+import streamlit as st
+import requests
+
+# API endpoint URL
+API_URL = "https://api.thetradedesk.com/v3/authentication"
+
+# Parameters 
+Params= "Login": "ttd_api_startapp@startapp.com", 
+"Password": "sodaCSM2019!", 
+"TokenExpirationInMinutes": 1440.0}
+
+#
+response = requests.get(API_URL)
+
+# Check if the request was successful
+if response.status_code == 200:
+    data = response.json()
+    # st.write(data)
+else:
+    st.write("Error: Could not retrieve Token from TTD.")
