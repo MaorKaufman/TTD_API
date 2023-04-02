@@ -24,7 +24,7 @@ else:
     st.write("Error: Could not retrieve Token from TTD.")
     
 #
-API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth="TTD-Auth
+API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth=" + Auth
 
 Headers=
 {"Content-Type": "application/json"}
