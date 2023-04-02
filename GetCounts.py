@@ -25,15 +25,15 @@ else:
     
 #
 API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth=" + Auth
-
+#
 Headers=
 {"Content-Type": "application/json"}
-
+#
 segID=input("Please insert SegmentID:")
 
 # Parameters
 { Params=  "ProviderId": "startapp",
-  "ProviderElementId": ,
+  "ProviderElementId":segID ,
   "IncludeActiveIDsCountExpandedFlag":" true",
   "PageStartIndex":"0",
   "PageSize": "100"}
