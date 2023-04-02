@@ -17,8 +17,7 @@ Params= {"Login": "ttd_api_startapp@startapp.com",
 response = requests.get(API_URL)
 
 # Check if the request was successful
-#if response.status_code == 200:
-if respone.json notnull
+if response.status_code >= 200 and response.status_code<300:
     data= response.json()  
     auth = data['Token']
 else:
