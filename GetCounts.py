@@ -18,8 +18,8 @@ response = requests.get(API_URL)
 
 # Check if the request was successful
 if response.status_code == 200:
-data= response.json()  
-TTD-Auth = data("Token")
+    data= response.json()  
+    TTD-Auth = data("Token")
 else:
     st.write("Error: Could not retrieve Token from TTD.")
     
