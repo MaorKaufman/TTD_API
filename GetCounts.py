@@ -19,12 +19,12 @@ response = requests.get(API_URL)
 # Check if the request was successful
 if response.status_code == 200:
     data= response.json()  
-    Auth = data['Token']
+    auth = data['Token']
 else:
     st.write("Error: Could not retrieve Token from TTD.")
     
 #
-API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth=" + Auth
+API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth=" + auth
 #
 Headers = {"Content-Type": "application/json"}
        
