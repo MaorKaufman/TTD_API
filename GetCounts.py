@@ -32,7 +32,7 @@ Headers = {"Content-Type": "application/json"}
 segID=input("Please insert SegmentID:")
 
 # Parameters
-{ Params=  "ProviderId": "startapp",
+Params = {"ProviderId": "startapp",
   "ProviderElementId":segID ,
   "IncludeActiveIDsCountExpandedFlag":" true",
   "PageStartIndex":"0",
