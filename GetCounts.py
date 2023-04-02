@@ -5,9 +5,8 @@ import requests
 
 # API endpoint URL
 API_URL = "https://api.thetradedesk.com/v3/authentication"
-
-Headers=
-{"Content-Type": "application/json"}
+#
+Headers = {"Content-Type": "application/json"}
 
 # Parameters 
 Params= {"Login": "ttd_api_startapp@startapp.com", 
