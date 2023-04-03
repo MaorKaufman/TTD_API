@@ -81,6 +81,7 @@ if response.status_code >= 200 and response.status_code<300 and (response.json()
 else:
     if (response.json())['ResultCount']==0:
         st.write("The segmentID must be greater then 0 and valid")
-    st.write("could not retrieve data")
+    else:
+        st.write("could not retrieve data")
     
 
