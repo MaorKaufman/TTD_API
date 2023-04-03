@@ -108,7 +108,7 @@ def Update_Segment_Name():
         if response.status_code >= 200 and response.status_code<300 and flag!=1  :
              data = response.json() 
              st.subheader("Segment name and/description updated successfully")
-             st.write(data)
+            # st.write(data)
              st.table(data)
 
         else:
