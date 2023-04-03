@@ -6,8 +6,6 @@ import json
 def intro():
     import streamlit as st
 
-    st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
-    st.sidebar.success("Select a UI tool.")
 
 page_names_to_funcs = {
     "—": intro
@@ -16,9 +14,12 @@ page_names_to_funcs = {
    # "DataFrame Demo": data_frame_demo
 }
 
+st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
 demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()    
 st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
+st.sidebar.success("Select a UI tool.")
+
 
 #
 segID= st.text_input("Please insert SegmentID: ")
