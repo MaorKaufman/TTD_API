@@ -77,19 +77,10 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
     data = response.json() 
-    data = data['Result']
-    data = data['0']
-    st.write(data)
-    #SegmentID = data['ProviderElementId']
-    #ParentID = data['ParentElementId']
-    #SegmentName = data['DisplayName']
-    #Description = data['Description']
-    #RecivedIDCount = data['ReceivedIDsCount']
-    #ActiveIDCount = data['ActiveIDsCount']   
-    #LastUpdateTS = data['LastUpdatedAtUTC']    
-    st.write("Segment ID:" + SegmentID)
-    #st.write("Parent Segment ID"+ (response.json())['ParentElementId'])
+    st.code(data)
 else:
+    if (response.json())['ResultCount']==0:
+        st.write("The segmentID must be greater then 0 and valid")
     st.write("could not retrieve data")
     
 
