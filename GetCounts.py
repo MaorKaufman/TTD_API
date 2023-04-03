@@ -1,20 +1,22 @@
 import streamlit as st
 import requests
+import json
 
 
 
 # API endpoint URL
 API_URL = "https://api.thetradedesk.com/v3/authentication"
-#
-Headers = {"Content-Type": "application/json"}
 
 # Data 
 data= {"Login": "ttd_api_startapp@startapp.com", 
 "Password": "sodaCSM2019!", 
 "TokenExpirationInMinutes": 1440.0}
-
 #
-response = requests.get(API_URL)
+json_data = json.dumps(data)
+#
+Headers = {"Content-Type": "application/json"}
+#
+response = requests.post(url, headers=headers, data=json_data)
 
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
