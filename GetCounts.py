@@ -3,6 +3,17 @@ import pandas as pd
 import requests
 import json
 
+def intro():
+    import streamlit as st
+
+    st.write("# Welcome to Start.io TTD's UI 👋")
+    st.sidebar.success("Select a UI tool.")
+    
+st.markdown(
+        """
+        This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.
+    """
+   )
 segID= st.text_input("Please insert SegmentID: ")
 
 # API endpoint URL
