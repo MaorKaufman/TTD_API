@@ -11,7 +11,7 @@ def intro():
 
 page_names_to_funcs = {
     "—": intro,
-    "Get Counts": intro
+    "Get Counts": get_counts,
   #  "Plotting Demo": plotting_demo,
    # "Mapping Demo": mapping_demo,
    # "DataFrame Demo": data_frame_demo
@@ -26,61 +26,62 @@ st.sidebar.success("Select a UI tool.")
 
 
 #
-st.subheader("Get segment count API")
-segID= st.text_input("Please insert SegmentID: ")
+def get_counts()
+    st.subheader("Get segment count API")
+    segID= st.text_input("Please insert SegmentID: ")
 
-# API endpoint URL
-API_URL = "https://api.thetradedesk.com/v3/authentication"
+    # API endpoint URL
+    API_URL = "https://api.thetradedesk.com/v3/authentication"
 
-# Data 
-data= {"Login": "ttd_api_startapp@startapp.com", 
-"Password": "sodaCSM2019!", 
-"TokenExpirationInMinutes": 1440.0}
-#
-# st.write(type(json.dumps(data)))
-json_data = json.dumps(data)
-#
-Headers = {"Content-Type": "application/json"}
-#
-response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
+    # Data 
+    data= {"Login": "ttd_api_startapp@startapp.com", 
+    "Password": "sodaCSM2019!", 
+    "TokenExpirationInMinutes": 1440.0}
+     #
+    # st.write(type(json.dumps(data)))
+    json_data = json.dumps(data)
+    #
+    Headers = {"Content-Type": "application/json"}
+    #
+    response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 
-# Check if the request was successful
-if response.status_code >= 200 and response.status_code<300:
-    data= response.json()  
-    auth = data['Token']
-  #  st.write("the token is"+ auth)
-else:
-     #   st.write(response.status_code)
+    # Check if the request was successful
+    if response.status_code >= 200 and response.status_code<300:
+        data= response.json()  
+        auth = data['Token']
+    #  st.write("the token is"+ auth)
+    else:
+      #   st.write(response.status_code)
       #  st.write(response.json()['Token']) 
-        st.write("Error: Could not retrieve Token from TTD.")
+         st.write("Error: Could not retrieve Token from TTD.")
     
-#
-API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
+    #
+    API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
        
-#Start process
-#segID=input("Please insert SegmentID:")
-#
-Headers = {"TTD-Auth": auth,
+    #Start process
+    #segID=input("Please insert SegmentID:")
+    #
+    Headers = {"TTD-Auth": auth,
            "Content-Type": "application/json"}
-# data
-data = {"ProviderId": "startapp",
-  "ProviderElementId":segID ,
-  "IncludeActiveIDsCountExpandedFlag":" true",
-  "PageStartIndex":"0",
-  "PageSize": "100"}
-#
-json_data = json.dumps(data)
-#
+    # data
+    data = {"ProviderId": "startapp",
+     "ProviderElementId":segID ,
+     "IncludeActiveIDsCountExpandedFlag":" true",
+     "PageStartIndex":"0",
+     "PageSize": "100"}
+    #
+    json_data = json.dumps(data)
+    #
 
-response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
-#
-#st.write(response.status_code)
+    response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
+    #
+    #st.write(response.status_code)
       #  st.write(response.json()['Token']) 
-# Check if the request was successful
-if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
-    data = response.json() 
-    st.write(data)
-else:
-     st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
+    # Check if the request was successful
+    if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
+         data = response.json() 
+         st.write(data)
+    else:
+         st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
     
 
