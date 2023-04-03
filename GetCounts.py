@@ -16,7 +16,7 @@ json_data = json.dumps(data)
 #
 Headers = {"Content-Type": "application/json"}
 #
-response = requests.post(url, headers=headers, data=json_data)
+response = requests.post(API_URL, headers,json_data)
 
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
