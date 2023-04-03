@@ -44,9 +44,12 @@ data = {"ProviderId": "startapp",
   "PageStartIndex":"0",
   "PageSize": "100"}
 #
+json_data = json.dumps(data)
+#
+
 response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 #
-st.write(response.status_code)
+#st.write(response.status_code)
       #  st.write(response.json()['Token']) 
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
