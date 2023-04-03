@@ -78,6 +78,7 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
     data = response.json() 
     data = data['Result']
+    data = data['0']
     st.write(data)
     #SegmentID = data['ProviderElementId']
     #ParentID = data['ParentElementId']
