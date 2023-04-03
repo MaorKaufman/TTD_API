@@ -79,7 +79,7 @@ st.write((response.json())['ResultCount'])
 if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
     data = json.loads(response.text)
     #data = response.json() 
-   SegmentID = data['ProviderElementId']
+    SegmentID = data['ProviderElementId']
     #ParentID = data['ParentElementId']
     #SegmentName = data['DisplayName']
     #Description = data['Description']
