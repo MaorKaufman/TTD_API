@@ -19,7 +19,7 @@ def get_counts():
     "TokenExpirationInMinutes": 1440.0}
     
     json_data = json.dumps(data)
-     Headers = {"Content-Type": "application/json"}
+    Headers = {"Content-Type": "application/json"}
     #
     response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
     # Check if the request was successful
