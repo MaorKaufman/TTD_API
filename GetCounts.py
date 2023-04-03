@@ -101,6 +101,7 @@ def Update_Segment_Name():
     # Check if the request was successful
     if response.status_code >= 200 and response.status_code<300 and flag!=1  :
          data = response.json() 
+         st.subheader("Segment name and/description updated successfully")
          st.write(data)
     else:
          st.write("Request was not succeeded")
