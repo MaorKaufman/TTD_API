@@ -87,7 +87,7 @@ def Update_Segment_Name():
      "ProviderElementId":segID ,
      "ParentElementId": "customstartapp",
      "DisplayName":NewSegName,
-     "Buyable": "true",
+     "Buyable": 1,
      "Description":NewDescription}
     #
     json_data = json.dumps(data)
