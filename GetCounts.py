@@ -82,7 +82,7 @@ if response.status_code >= 200 and response.status_code<300 and (response.json()
     SegmentName= data['DisplayName']
     Description= data['Description']
     RecivedIDCount= data['ReceivedIDsCount']
-    ActiveIDCount= data['ActiveIDsCount]   
+    ActiveIDCount= data['ActiveIDsCount']   
     LastUpdateTS= data['LastUpdatedAtUTC']    
     st.write("Segment ID:" + SegmentID)
     st.write("Parent Segment ID"+ ParentID)
