@@ -92,7 +92,7 @@ def Update_Segment_Name():
     #
     json_data = json.dumps(data)
     #
-    if NewSegName==string.empty or NewDescription==string.empty or segID==string.empty:
+    if NewSegName=="" or NewDescription=="" or segID=="":
         st.write("Please insert all mandatory fields")
     else:
         response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
