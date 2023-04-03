@@ -17,7 +17,7 @@ page_names_to_funcs = {
 }
 
 demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
-st.markdown("Get Counts" {list(page_names_to_funcs.keys())[1]}")
+st.markdown(f"# {list(page_names_to_funcs.keys())[1]}")
 page_names_to_funcs[demo_name]()    
 st.markdown(
         """
