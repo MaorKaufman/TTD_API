@@ -23,7 +23,7 @@ st.sidebar.success("Select a UI tool.")
 
 
 #
-st.title("Get segment count API")
+st.subheader("Get segment count API")
 segID= st.text_input("Please insert SegmentID: ")
 
 # API endpoint URL
