@@ -24,9 +24,10 @@ else:
     st.write("Error: Could not retrieve Token from TTD.")
     
 #
-API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query?TTD-Auth=" + auth
+API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
 #
-Headers = {"Content-Type": "application/json"}
+Headers = {"Content-Type": "application/json",
+          TTD-Auth= auth}
        
 #
 segID=input("Please insert SegmentID:")
