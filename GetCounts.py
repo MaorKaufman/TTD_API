@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import requests
 import json
+import string
 
 def intro():
     import streamlit as st
@@ -76,7 +77,9 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
     data = response.json() 
-    if data['ProviderElementId']!=0:
+    if segID==string.empty
+        
+    else
         st.write(data)
 else:
     st.write("could not retrieve data")
