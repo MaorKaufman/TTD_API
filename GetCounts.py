@@ -57,6 +57,7 @@ def get_counts():
     else:
         segID.clear()
         data.clear()
+        
 def Update_Segment_Name():
     if demo_name=="Update segment name":
         st.subheader("Update segment name and/or description API")
