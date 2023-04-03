@@ -8,24 +8,6 @@ import string
 def intro():
     import streamlit as st
 
-
-page_names_to_funcs = {
-    "—": intro,
-   # "Get Counts": get_counts
-  # "Plotting Demo": plotting_demo,
-   # "Mapping Demo": mapping_demo,
-   # "DataFrame Demo": data_frame_demo
-}
-
-st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
-st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
-
-demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
-page_names_to_funcs[demo_name]()    
-st.sidebar.success("Select a UI tool.")
-
-
-#
 def get_counts():
     st.subheader("Get segment count API")
     segID= st.text_input("Please insert SegmentID: ")
@@ -85,3 +67,21 @@ def get_counts():
          st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
     
 
+
+page_names_to_funcs = {
+    "—": intro,
+    "Get Counts": get_counts
+  # "Plotting Demo": plotting_demo,
+   # "Mapping Demo": mapping_demo,
+   # "DataFrame Demo": data_frame_demo
+}
+
+st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
+st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
+
+demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
+page_names_to_funcs[demo_name]()    
+st.sidebar.success("Select a UI tool.")
+
+
+#
