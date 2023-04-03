@@ -6,7 +6,7 @@ import json
 def intro():
     import streamlit as st
 
-    st.write("# Welcome to Start.io TTD's UI 👋")
+    st.write(" Welcome to Start.io TTD's UI 👋")
     st.sidebar.success("Select a UI tool.")
     
 st.markdown(
