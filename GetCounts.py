@@ -105,7 +105,10 @@ def Update_Segment_Name():
          st.write(data)
     else:
          st.write("Request was not succeeded")
-           
+            
+def reset_selectbox():
+    selected_option = None    
+    
 page_names_to_funcs = {
     "—": intro,
     "Get Counts": get_counts,
@@ -117,7 +120,7 @@ page_names_to_funcs = {
 st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
 st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
 
-demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
+demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys(), on_change=lambda x: reset_selectbox())
 page_names_to_funcs[demo_name]()    
 st.sidebar.success("Select a UI tool.")
 
