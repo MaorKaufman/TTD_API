@@ -2,8 +2,7 @@ import streamlit as st
 import requests
 import json
 
-segID=input("Please insert SegmentID:")
-
+segID= input("Please insert SegmentID:")
 
 # API endpoint URL
 API_URL = "https://api.thetradedesk.com/v3/authentication"
