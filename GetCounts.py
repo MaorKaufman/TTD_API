@@ -24,7 +24,8 @@ if response.status_code >= 200 and response.status_code<300:
     auth = data['Token']
     st.write("the token is"+ auth)
 else:
-    st.write("Error: Could not retrieve Token from TTD.")
+        st.write(response.status_code)
+        st.write("Error: Could not retrieve Token from TTD.")
     
 #
 API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
