@@ -25,6 +25,7 @@ if response.status_code >= 200 and response.status_code<300:
     st.write("the token is"+ auth)
 else:
         st.write(response.status_code)
+        st.write(response.json()['Token']) 
         st.write("Error: Could not retrieve Token from TTD.")
     
 #
