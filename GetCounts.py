@@ -55,7 +55,7 @@ def get_counts():
 #    
 def Update_Segment_Name():
     st.subheader("Update segment name and/or description API")
-    segID= st.text_input("Please insert SegmentID: ")
+    segID2= st.text_input("Please insert SegmentID: ")
     NewSegName= st.text_input("Please insert the new segment name: ")
     NewDescription= st.text_input("Please insert the new description: ")
     # API endpoint URL
@@ -84,7 +84,7 @@ def Update_Segment_Name():
            "Content-Type": "application/json"}
     # data
     payload  = {"ProviderId": "startapp",
-     "ProviderElementId":segID ,
+     "ProviderElementId":segID2 ,
      "ParentElementId": "customstartapp",
      "DisplayName":NewSegName,
      "Buyable": 1,
@@ -92,7 +92,7 @@ def Update_Segment_Name():
     #
     json_data = json.dumps(payload)
     #
-    if NewSegName=="" or NewDescription=="" or segID=="":
+    if NewSegName=="" or NewDescription=="" or segID2=="":
         flag=1
         st.write("Please insert all mandatory fields")
     else:
