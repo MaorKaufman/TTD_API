@@ -104,8 +104,6 @@ def Update_Segment_Name():
          st.write(data)
     else:
          st.write("Request was not succeeded")
-         st.write(response.status_code)
-         st.write(segID + "," +NewSegName+","+NewDescription)
            
 page_names_to_funcs = {
     "—": intro,
