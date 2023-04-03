@@ -15,7 +15,14 @@ page_names_to_funcs = {
    # "Mapping Demo": mapping_demo,
    # "DataFrame Demo": data_frame_demo
 }
-st.sidebar.image(add_logo(logo_path="C:/Users/MaorKaufman/Downloads/StartLogo.jpg", width=50, height=60)) 
+def add_logo(logo_path, width, height):
+    """Read and return a resized logo"""
+    logo = Image.open(logo_path)
+    modified_logo = logo.resize((width, height))
+    return modified_logo
+
+my_logo = add_logo(logo_path="C:/Users/MaorKaufman/Downloads/StartLogo.jpg", width=50, height=60)
+st.sidebar.image(my_logo)
 st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
 st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
 
