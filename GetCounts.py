@@ -53,7 +53,7 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 #st.write(response.status_code)
       #  st.write(response.json()['Token']) 
 # Check if the request was successful
-if response.status_code >= 200 and response.status_code<300 and segID!=null:
+if response.status_code >= 200 and response.status_code<300 and segID is not None::
     data = response.json() 
     st.write(data)
 else:
