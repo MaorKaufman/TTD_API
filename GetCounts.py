@@ -77,7 +77,7 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
     data = response.json() 
-    st.code(data)
+    st.write(data)
 else:
     if (response.json())['ResultCount']==0:
         st.write("The segmentID must be greater then 0 and valid")
