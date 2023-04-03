@@ -83,21 +83,21 @@ def Update_Segment_Name():
     Headers = {"TTD-Auth": auth,
            "Content-Type": "application/json"}
     # data
-    data = {"ProviderId": "startapp",
+    payload  = {"ProviderId": "startapp",
      "ProviderElementId":segID ,
      "ParentElementId": "customstartapp",
      "DisplayName":NewSegName,
      "Buyable": 1,
      "Description":NewDescription}
     #
-    json_data = json.dumps(data)
+    json_data = json.dumps(payload)
     #
     if NewSegName=="" or NewDescription=="" or segID=="":
         flag=1
         st.write("Please insert all mandatory fields")
     else:
         flag=0
-        response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
+        response = requests.put(url=API_URL ,headers=Headers ,data =json_data)
     # Check if the request was successful
     if response.status_code >= 200 and response.status_code<300 and flag!=1  :
          data = response.json() 
