@@ -26,7 +26,7 @@ st.sidebar.success("Select a UI tool.")
 
 
 #
-def get_counts()
+def get_counts():
     st.subheader("Get segment count API")
     segID= st.text_input("Please insert SegmentID: ")
 
