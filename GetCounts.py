@@ -12,7 +12,7 @@ data= {"Login": "ttd_api_startapp@startapp.com",
 "Password": "sodaCSM2019!", 
 "TokenExpirationInMinutes": 1440.0}
 #
-st.write(json.ldumps(data))
+st.write(json.dumps(data))
 json_data = json.dumps(data)
 #
 Headers = {"Content-Type": "application/json"}
