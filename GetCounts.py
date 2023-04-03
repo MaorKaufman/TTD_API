@@ -80,7 +80,7 @@ if response.status_code >= 200 and response.status_code<300:
     if segID!=string.empty:
          st.write(data)
     else:
-       
+       {}
 else:
     st.write("could not retrieve data")
     
