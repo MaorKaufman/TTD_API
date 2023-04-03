@@ -54,7 +54,7 @@ def get_counts():
         else:
              st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
     #   
-   else:
+    else:
         segID.clear()
 def Update_Segment_Name():
     if demo_name=="Update segment name":
