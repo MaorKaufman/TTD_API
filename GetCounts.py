@@ -85,7 +85,7 @@ if response.status_code >= 200 and response.status_code<300 and (response.json()
     #RecivedIDCount = data['ReceivedIDsCount']
     #ActiveIDCount = data['ActiveIDsCount']   
     #LastUpdateTS = data['LastUpdatedAtUTC']    
-    st.write("Segment ID:" + (response.json())['ProviderElementId'])
+    st.write("Segment ID:" + format(response.json())['ProviderElementId'])
     st.write("Parent Segment ID"+ (response.json())['ParentElementId'])
 else:
     st.write("could not retrieve data")
