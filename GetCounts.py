@@ -16,9 +16,10 @@ page_names_to_funcs = {
    # "DataFrame Demo": data_frame_demo
 }
 
+demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()    
 st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
-demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
+
 #
 segID= st.text_input("Please insert SegmentID: ")
 
