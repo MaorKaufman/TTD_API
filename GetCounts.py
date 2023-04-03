@@ -93,11 +93,13 @@ def Update_Segment_Name():
     json_data = json.dumps(data)
     #
     if NewSegName=="" or NewDescription=="" or segID=="":
+        flag=1
         st.write("Please insert all mandatory fields")
     else:
+        flag=0
         response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
     # Check if the request was successful
-    if response.status_code >= 200 and response.status_code<300 :
+    if response.status_code >= 200 and response.status_code<300 and flag!=1  :
          data = response.json() 
          st.write(data)
     else:
