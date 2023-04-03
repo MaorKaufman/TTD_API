@@ -66,8 +66,6 @@ def get_counts():
     else:
          st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
     
-
-
 page_names_to_funcs = {
     "—": intro,
     "Get Counts": get_counts
