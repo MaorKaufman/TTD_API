@@ -9,6 +9,7 @@ def intro():
     import streamlit as st
 
 def get_counts():
+    st.write(demo_name)
     st.subheader("Get segment count API")
     segID= st.text_input("Please insert SegmentID: ")
     # API endpoint URL
