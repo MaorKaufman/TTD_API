@@ -11,7 +11,7 @@ def intro():
 
 page_names_to_funcs = {
     "—": intro,
-    "Get Counts": get_counts,
+    "Get Counts": get_counts
   #  "Plotting Demo": plotting_demo,
    # "Mapping Demo": mapping_demo,
    # "DataFrame Demo": data_frame_demo
