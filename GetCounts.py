@@ -6,7 +6,7 @@ import json
 def intro():
     import streamlit as st
 
-    st.title(" Welcome to Start.io TTD's UI 👋")
+    st.title(" Welcome to Start.io's TTD's UI tool")
     st.sidebar.success("Select a UI tool.")
 
 page_names_to_funcs = {
