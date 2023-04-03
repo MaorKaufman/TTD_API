@@ -103,7 +103,7 @@ def Update_Segment_Name():
          data = response.json() 
          st.write(data)
     else:
-         st.write("Request was no succeeded")
+         st.write("Request was not succeeded")
             
 page_names_to_funcs = {
     "—": intro,
