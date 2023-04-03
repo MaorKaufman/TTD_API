@@ -50,4 +50,4 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 if response.status_code >= 200 and response.status_code<300:
     data = response.json()
     df = pd.DataFrame(data)
-  st.write(df)
+    st.write(data)
