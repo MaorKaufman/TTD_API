@@ -51,5 +51,5 @@ if response.status_code >= 200 and response.status_code<300:
     data = response.json()
     df = pd.DataFrame(data)
     st.write(data)
-else
+else:
     st.write("could not retrieve data")
