@@ -6,7 +6,7 @@ import json
 def intro():
     import streamlit as st
 
-    st.write(" Welcome to Start.io TTD's UI 👋")
+    st.title(" Welcome to Start.io TTD's UI 👋")
     st.sidebar.success("Select a UI tool.")
 
 page_names_to_funcs = {
@@ -17,9 +17,8 @@ page_names_to_funcs = {
 }
 
 demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
-st.markdown(f"# {list(page_names_to_funcs.keys())[1]}")
 page_names_to_funcs[demo_name]()    
-st.markdown(
+st.subheader(
         """
         This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.
     """
