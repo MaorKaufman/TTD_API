@@ -107,7 +107,8 @@ def Update_Segment_Name():
          st.write("Request was not succeeded")
             
 def reset_selectbox():
-    selected_option = None    
+     set.clear()
+
     
 page_names_to_funcs = {
     "—": intro,
