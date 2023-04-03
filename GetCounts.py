@@ -109,7 +109,8 @@ def Update_Segment_Name():
              st.write(data)
         else:
              st.write("Request was not succeeded")
-     else:
+                
+    else:
         segID2.clear()
 
 page_names_to_funcs = {
