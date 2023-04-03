@@ -8,8 +8,8 @@ API_URL = "https://api.thetradedesk.com/v3/authentication"
 #
 Headers = {"Content-Type": "application/json"}
 
-# Parameters 
-Params= {"Login": "ttd_api_startapp@startapp.com", 
+# Data 
+data= {"Login": "ttd_api_startapp@startapp.com", 
 "Password": "sodaCSM2019!", 
 "TokenExpirationInMinutes": 1440.0}
 
@@ -34,8 +34,8 @@ Headers = {"TTD-Auth": auth,
 #Start process
 segID=input("Please insert SegmentID:")
 
-# Parameters
-Params = {"ProviderId": "startapp",
+# data
+data = {"ProviderId": "startapp",
   "ProviderElementId":segID ,
   "IncludeActiveIDsCountExpandedFlag":" true",
   "PageStartIndex":"0",
