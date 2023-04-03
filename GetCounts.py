@@ -77,9 +77,9 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
     data = response.json() 
-    if segID==string.empty
+    if segID==string.empty:
         
-    else
+    else:
         st.write(data)
 else:
     st.write("could not retrieve data")
