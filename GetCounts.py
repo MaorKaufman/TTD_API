@@ -55,7 +55,8 @@ response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
 # Check if the request was successful
 if response.status_code >= 200 and response.status_code<300:
     data = response.json()
-    df = pd.DataFrame(data)
+    json_data = json.dumps(data)
+    df = pd.DataFrame(json_data)
     st.table(df)  
  #   st.write(data)
 else:
