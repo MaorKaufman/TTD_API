@@ -11,35 +11,25 @@ def intro():
 def get_counts():
     st.subheader("Get segment count API")
     segID= st.text_input("Please insert SegmentID: ")
-
     # API endpoint URL
     API_URL = "https://api.thetradedesk.com/v3/authentication"
-
     # Data 
     data= {"Login": "ttd_api_startapp@startapp.com", 
     "Password": "sodaCSM2019!", 
     "TokenExpirationInMinutes": 1440.0}
-     #
-    # st.write(type(json.dumps(data)))
-    json_data = json.dumps(data)
-    #
-    Headers = {"Content-Type": "application/json"}
+     json_data = json.dumps(data)
+     Headers = {"Content-Type": "application/json"}
     #
     response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
-
     # Check if the request was successful
     if response.status_code >= 200 and response.status_code<300:
         data= response.json()  
         auth = data['Token']
     #  st.write("the token is"+ auth)
     else:
-      #   st.write(response.status_code)
-      #  st.write(response.json()['Token']) 
-         st.write("Error: Could not retrieve Token from TTD.")
-    
-    #
+        st.write("Error: Could not retrieve Token from TTD.")
+     #
     API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
-       
     #Start process
     #segID=input("Please insert SegmentID:")
     #
@@ -54,18 +44,14 @@ def get_counts():
     #
     json_data = json.dumps(data)
     #
-
     response = requests.post(url=API_URL ,headers=Headers ,data=json_data)
-    #
-    #st.write(response.status_code)
-      #  st.write(response.json()['Token']) 
     # Check if the request was successful
     if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
          data = response.json() 
          st.write(data)
     else:
          st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
-    
+#    
 page_names_to_funcs = {
     "—": intro,
     "Get Counts": get_counts
@@ -81,5 +67,3 @@ demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
 page_names_to_funcs[demo_name]()    
 st.sidebar.success("Select a UI tool.")
 
-
-#
