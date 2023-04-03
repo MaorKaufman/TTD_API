@@ -14,7 +14,7 @@ page_names_to_funcs = {
    # "Mapping Demo": mapping_demo,
    # "DataFrame Demo": data_frame_demo
 }
-image = Image.open(‘C:/Users/MaorKaufman/Downloads/StartLogo.jpg’)
+image = Image.open("C:/Users/MaorKaufman/Downloads/StartLogo.jpg")
 st.sidebar.image(image, width= use_column_width=True)
 st.sidebar.title(" Welcome to Start.io's TTD's UI tool")
 st.sidebar.subheader("""This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.""")
