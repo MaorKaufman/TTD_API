@@ -26,8 +26,8 @@ else:
 #
 API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
 #
-Headers = {"Content-Type": "application/json",
-          "TTD-Auth": auth}
+Headers = {"TTD-Auth": format(auth),
+           "Content-Type": "application/json"}
        
 #Start process
 segID=input("Please insert SegmentID:")
