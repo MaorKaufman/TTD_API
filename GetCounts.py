@@ -109,6 +109,8 @@ def Update_Segment_Name():
              data = response.json() 
              st.subheader("Segment name and/description updated successfully")
              st.write(data)
+             st.table(data)
+
         else:
              st.write("Request was not succeeded")
                 
