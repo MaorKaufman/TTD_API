@@ -33,13 +33,13 @@ else:
 API_URL="https://api.thetradedesk.com/v3/thirdpartydata/query"
        
 #Start process
-#segID=input("Please insert SegmentID:")
+segID=input("Please insert SegmentID:")
 #
 Headers = {"TTD-Auth": auth,
            "Content-Type": "application/json"}
 # data
 data = {"ProviderId": "startapp",
-  "ProviderElementId":"14.3.17.0" ,
+  "ProviderElementId":segID ,
   "IncludeActiveIDsCountExpandedFlag":" true",
   "PageStartIndex":"0",
   "PageSize": "100"}
