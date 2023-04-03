@@ -8,7 +8,16 @@ def intro():
 
     st.write(" Welcome to Start.io TTD's UI 👋")
     st.sidebar.success("Select a UI tool.")
-    
+
+page_names_to_funcs = {
+    "—": intro
+  #  "Plotting Demo": plotting_demo,
+   # "Mapping Demo": mapping_demo,
+   # "DataFrame Demo": data_frame_demo
+}
+
+demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
+page_names_to_funcs[demo_name]()    
 st.markdown(
         """
         This tools was created to enable Start.io's team to get details/ update custom/prepack segments on TTD's side.
@@ -70,12 +79,4 @@ if response.status_code >= 200 and response.status_code<300:
 else:
     st.write("could not retrieve data")
     
-page_names_to_funcs = {
-    "—": intro
-  #  "Plotting Demo": plotting_demo,
-   # "Mapping Demo": mapping_demo,
-   # "DataFrame Demo": data_frame_demo
-}
 
-demo_name = st.sidebar.selectbox("Choose a UI", page_names_to_funcs.keys())
-page_names_to_funcs[demo_name]()
