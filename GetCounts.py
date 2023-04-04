@@ -50,7 +50,8 @@ def get_counts():
         # Check if the request was successful
         if response.status_code >= 200 and response.status_code<300 and (response.json())['ResultCount']!=0:
              data = response.json() 
-             st.write(data)
+             st.table(data['Result'][0])
+             #st.write(data)
         else:
              st.write("Could not retrieve data-plesae note that segmentID must be greater then 0 and valid")
     #   
